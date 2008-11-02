@@ -1,0 +1,9 @@
+{
+    plugins     => [ qw/DirTreeBrowse/ ],
+    plug_dir_tree => {
+        re                     => qr/[.]gif/,
+        auto_html              => 1,
+        start                  => 'pics',
+        display_path_separator => '::',
+    },
+}
