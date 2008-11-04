@@ -11,7 +11,8 @@ WriteMakefile
                            'Test::More' => 0,
                            'App::ZofCMS' => '0.0106',
                            'File::Glob' => '1.05',
-                           'HTML::Template' => '2.9'
+                           'HTML::Template' => '2.9',
+                           'App::ZofCMS::Plugin::Base' => '0.0102'
                          }
         )
 ;

@@ -13,7 +13,8 @@ my $builder = Module::Build->new(
     requires => {
         'App::ZofCMS'    => 0.0106,
         'File::Glob'     => 1.05,
-        'HTML::Template' => 2.9
+        'HTML::Template' => 2.9,
+        'App::ZofCMS::Plugin::Base' => 0.0102,
     },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-DirTreeBrowse-*' ],
     create_makefile_pl => 'traditional',
