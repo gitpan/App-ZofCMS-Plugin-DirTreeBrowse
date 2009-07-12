@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DirTreeBrowse;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 use base 'App::ZofCMS::Plugin::Base';
 use File::Glob qw/bsd_glob/;
 use HTML::Template;
@@ -29,7 +29,7 @@ sub _do {
     }
 
     my $display_path = $path;
-    $display_path =~ s|^PDF/?||;
+    $display_path =~ s|^\Q$conf->{start}\E/?||;
 
     if ( $conf->{display_path_separator} ) {
         $display_path =~ s|/|$conf->{display_path_separator}|g;

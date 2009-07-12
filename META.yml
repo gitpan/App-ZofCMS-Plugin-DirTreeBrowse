@@ -1,6 +1,6 @@
 ---
 name: App-ZofCMS-Plugin-DirTreeBrowse
-version: 0.0102
+version: 0.0103
 author:
   - "Zoffix <'zoffix@cpan.org'>"
 abstract: plugin to display browseable directory tree
@@ -17,8 +17,8 @@ build_requires:
 provides:
   App::ZofCMS::Plugin::DirTreeBrowse:
     file: lib/App/ZofCMS/Plugin/DirTreeBrowse.pm
-    version: 0.0102
-generated_by: Module::Build version 0.2808
+    version: 0.0103
+generated_by: Module::Build version 0.280801
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

@@ -1,5 +1,8 @@
 Revision history for App-ZofCMS-Plugin-DirTreeBrowse
 
+0.0103  July 11, 2009
+        Fixed broken "start" level removal
+
 0.0102  November 2, 2008
         Fixed missing dependencies
 
