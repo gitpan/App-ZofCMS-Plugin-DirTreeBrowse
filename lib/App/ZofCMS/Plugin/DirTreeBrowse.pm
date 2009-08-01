@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DirTreeBrowse;
 use warnings;
 use strict;
 
-our $VERSION = '0.0104';
+our $VERSION = '0.0105';
 use base 'App::ZofCMS::Plugin::Base';
 use File::Glob qw/bsd_glob/;
 use HTML::Template;
