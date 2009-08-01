@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DirTreeBrowse;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 use base 'App::ZofCMS::Plugin::Base';
 use File::Glob qw/bsd_glob/;
 use HTML::Template;
@@ -176,9 +176,26 @@ to execute.
         display_path_separator => '/',
     }
 
-The C<plug_dir_tree> takes a hashref as a value and can be set in either Main Config file or
+    plug_dir_tree => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            start                  => 'pics',
+            auto_html              => 'ul_class',
+            re                     => qr/[.]jpg$/,
+            q_name                 => 'dir_tree',
+            t_prefix               => 'dir_tree_',
+            display_path_separator => '/',
+        };
+    }
+
+The C<plug_dir_tree> takes a hashref or subref as a value and can be set in either Main Config file or
 ZofCMS Template file. Keys that are set in both Main Config file and ZofCMS Template file
-will get their values from ZofCMS Template file. Possible keys/values of C<plug_dir_tree>
+will get their values from ZofCMS Template file. If subref is specified,
+its return value will be assigned to C<plug_dir_tree> as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object.
+Possible keys/values of C<plug_dir_tree>
 hashref are as follows:
 
 =head3 C<start>
