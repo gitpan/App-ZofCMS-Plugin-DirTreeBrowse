@@ -15,7 +15,9 @@ my $builder = Module::Build->new(
         'File::Glob'     => 1.05,
         'HTML::Template' => 2.9,
         'App::ZofCMS::Plugin::Base' => 0.0102,
+        perl => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-DirTreeBrowse-*' ],
     create_makefile_pl => 'traditional',
 );

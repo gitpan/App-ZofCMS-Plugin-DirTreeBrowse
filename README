@@ -1,7 +1,7 @@
 App-ZofCMS-Plugin-DirTreeBrowse
 
-The module is an L<App::ZofCMS> plugin that provides means to display a browseable directory
-three (list of files and other dirs).
+The module is an L<App::ZofCMS> plugin that provides means to display
+a browseable directory three (list of files and other dirs).
 
 INSTALLATION
 

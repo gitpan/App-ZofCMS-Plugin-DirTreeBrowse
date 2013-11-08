@@ -3,9 +3,9 @@ package App::ZofCMS::Plugin::DirTreeBrowse;
 use warnings;
 use strict;
 
-our $VERSION = '0.0105';
+our $VERSION = '0.0106';
 use base 'App::ZofCMS::Plugin::Base';
-use File::Glob qw/bsd_glob/;
+use File::Glob (qw/bsd_glob/);
 use HTML::Template;
 
 sub _key { 'plug_dir_tree' }
@@ -99,6 +99,8 @@ END
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
